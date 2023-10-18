@@ -9,6 +9,8 @@ args: {
 	allowFlight: enum("TRUE", "FALSE") || default "TRUE"
 	// Enable GeyserMC
 	geyser: true
+	// Version of Minecraft paper to download
+	version: "1.20.2"
 }
 
 containers: mc: {
@@ -25,7 +27,7 @@ containers: mc: {
 		SPAWN_MONSTERS:       "true"
 		SPAWN_NPCS:           "true"
 		ALLOW_FLIGHT:         args.allowFlight
-		VERSION:              "1.20"
+		VERSION:              args.version
 		TYPE:                 localData.type
 	}
 
