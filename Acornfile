@@ -1,12 +1,12 @@
 args: {
 	// This must be TRUE to accept the EULA
-	eula: "TRUE"
+	eula: true
 	// Mode: "creative or survival"
 	mode: enum("creative", "survival") || default "creative"
 	// Difficulty
 	difficulty: "peaceful"
 	// Allow Flight
-	allowFlight: enum("TRUE", "FALSE") || default "TRUE"
+	allowFlight: true
 	// Enable GeyserMC
 	geyser: true
 	// Version of Minecraft paper to download
@@ -17,7 +17,11 @@ containers: mc: {
 	image: "itzg/minecraft-server"
 	ports: publish: if args.geyser {["25565:25565/tcp", "19132:19132/udp", "19132:19132/tcp"]} else {"25565:25565/tcp"}
 	env: {
-		EULA:                 args.eula
+		if args.eula {
+			EULA: "TRUE"
+		} else {
+			EULA: "FALSE"
+		}
 		MODE:                 args.mode
 		DIFFICULTY:           args.difficulty
 		ALLOW_NETHER:         "true"
@@ -26,9 +30,13 @@ containers: mc: {
 		SPAWN_ANIMALS:        "true"
 		SPAWN_MONSTERS:       "true"
 		SPAWN_NPCS:           "true"
-		ALLOW_FLIGHT:         args.allowFlight
-		VERSION:              args.version
-		TYPE:                 localData.type
+		if args.allowFlight {
+			ALLOW_FLIGHT: "TRUE"
+		} else {
+			ALLOW_FLIGHT: "FALSE"
+		}
+		VERSION: args.version
+		TYPE:    localData.type
 	}
 
 	if args.geyser {
