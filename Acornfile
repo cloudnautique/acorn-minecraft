@@ -1,13 +1,18 @@
+name:        "Minecraft Server"
+description: "Setup your own Minecraft Server"
+readme:      "./README.md"
+icon:        "./icon.png"
+
 args: {
 	// This must be TRUE to accept the EULA
 	eula: true
 	// Mode: "creative or survival"
 	mode: enum("creative", "survival") || default "creative"
-	// Difficulty
-	difficulty: "peaceful"
-	// Allow Flight
+	// Difficulty level of the game. Options are "peaceful", "easy", "normal", "hard"
+	difficulty: enum("peaceful", "easy", "normal", "hard") || default "peaceful"
+	// Allow characters to fly
 	allowFlight: true
-	// Enable GeyserMC
+	// Enable GeyserMC. Allows Bedrock clients to connect to the server.
 	geyser: true
 	// Version of Minecraft paper to download
 	version: "1.20.2"
