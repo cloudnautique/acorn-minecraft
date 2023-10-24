@@ -8,7 +8,7 @@ NOTE: Running this Acorn means you agree to the Minecraft EULA.
 
 Click this button to deploy the Minecraft Acorn to your own Acorn Sandbox:
 
-[![Run in Acorn](https://acorn.io/v1-ui/run/badge?image=ghcr.io+cloudnautique+acorn-minecraft:latest-%23&ref=cloudnautique)](https://acorn.io/run/ghcr.io/cloudnautique/minecraft-acorn:latest-%23?ref=cloudnautique)
+[![Run in Acorn](https://acorn.io/v1-ui/run/badge?image=ghcr.io+cloudnautique+acorn-minecraft:latest-%23&ref=cloudnautique)](https://acorn.io/run/ghcr.io/cloudnautique/acorn-minecraft:latest-%23?ref=cloudnautique)
 
 ## Quick Start
 
