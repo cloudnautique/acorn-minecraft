@@ -6,10 +6,10 @@ icon:        "./icon.png"
 args: {
 	// This must be TRUE to accept the EULA
 	eula: true
-	// Mode: "creative or survival"
-	mode: enum("creative", "survival") || default "creative"
+	// Mode: "creative or survival" default "survival"
+	mode: enum("creative", "survival") || default "survival"
 	// Difficulty level of the game. Options are "peaceful", "easy", "normal", "hard"
-	difficulty: enum("peaceful", "easy", "normal", "hard") || default "peaceful"
+	difficulty: enum("peaceful", "easy", "normal", "hard") || default "easy"
 	// Allow characters to fly
 	allowFlight: true
 	// Enable GeyserMC. Allows Bedrock clients to connect to the server.
