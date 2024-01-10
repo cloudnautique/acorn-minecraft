@@ -15,7 +15,9 @@ args: {
 	// Enable GeyserMC. Allows Bedrock clients to connect to the server.
 	geyser: true
 	// Version of Minecraft paper to download
-	version: "1.20.2"
+	version: "1.20.4"
+	// Online mode. If false, server will not authenticate players against Minecraft.net. Defautl true
+	onlineMode: true
 }
 
 containers: mc: {
@@ -27,8 +29,9 @@ containers: mc: {
 		} else {
 			EULA: "FALSE"
 		}
-		MODE:                 args.mode
-		DIFFICULTY:           args.difficulty
+		MODE:                 "\(args.mode)"
+		DIFFICULTY:           "\(args.difficulty)"
+		ONLINE_MODE:          "\(args.onlineMode)"
 		ALLOW_NETHER:         "true"
 		GENERATE_STRUCTURES:  "true"
 		ENABLE_COMMAND_BLOCK: "true"
