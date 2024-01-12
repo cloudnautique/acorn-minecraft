@@ -40,3 +40,13 @@ If you do not agree to the EULA, the Acorn will not run. You can agree to the EU
 You can change the difficulty of the game by passing the `--difficulty` option. By default it is set to `peaceful`, but can be set to `easy`, `normal`, or `hard` for more of a challenge.
 
 You can also set the mode from `creative` to `survival` by passing the `--mode` option. By default it is set to `creative`. In creative mode, you have unlimited resources, can fly, and can't be hurt by anything. In survival mode, you have to gather resources and can be hurt by mobs.
+
+## Additional config
+
+You can pass additional configuration options to the Minecraft server by passing them as environment variables. For example, if you wanted to set MAX_PLAYERS to 50, you would pass the following environment variable:
+
+```shell
+acorn run -e MAX_PLAYERS=50 ghcr.io/cloudnautique/acorn-minecraft:latest-#
+```
+
+You can find a list of settings in the Minecraft configuration docs here: <https://docker-minecraft-server.readthedocs.io/en/latest/variables/#server>
